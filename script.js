@@ -7,7 +7,13 @@ const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
 const menu = document.getElementById("menu");
 // console.log(menu);
-
+const inputName = document.querySelector('input[type="text"]');
+// console.log(inputName);
+const select = document.querySelector("select");
+// console.log(select);
+const form = document.querySelector("form");
+let pseudo = "";
+let language = "";
 questionContainer.style.border = "5px dashed red";
 questionContainer.style.borderRadius = "10px";
 questionContainer.addEventListener(
@@ -86,5 +92,30 @@ window.addEventListener("scroll",
       menu.style.top = 0;
     } else {
       menu.style.top = "-50px";
+    }
+  });
+//Evenement sur les inputs
+// Form Event
+
+
+
+inputName.addEventListener("input",
+  (e) => {
+    pseudo = e.target.value;
+
+  });
+select.addEventListener("input",
+  (e) => {
+    language = e.target.value;
+
+  });
+form.addEventListener("submit",
+  (e) => {
+    e.preventDefault();
+
+    if (cgv.checked) {
+      document.querySelector('form>div').innerHTML = ` <h3>Pseudo : ${pseudo}</h3> <h4>langage préféré : ${language}</h4>`;
+    } else {
+      alert("Veuilez acceptez les CGV");
     }
   });
