@@ -189,7 +189,7 @@ let interval = setInterval(() => {
   <div class="box">
   <h2> Nouvelle boite ! </h2>
   </div>`;
-}, 1000);
+}, 100000);
 
 // clearInterval()--------
 //-----------------------------------
@@ -197,7 +197,7 @@ document.body.addEventListener(
   "click",
   (e)=>{
     // console.log(e.target);
-    clearInterval(interval);
+    // clearInterval(interval);
 });
 
 // remove()--------
