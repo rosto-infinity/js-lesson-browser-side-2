@@ -114,8 +114,104 @@ form.addEventListener("submit",
     e.preventDefault();
 
     if (cgv.checked) {
-      document.querySelector('form>div').innerHTML = ` <h3>Pseudo : ${pseudo}</h3> <h4>langage préféré : ${language}</h4>`;
+      document.querySelector('form>div').innerHTML = `
+       <h3>Pseudo : ${pseudo}</h3>
+        <h4>langage préféré : ${language}</h4>
+        `;
     } else {
       alert("Veuilez acceptez les CGV");
     }
   });
+
+//------------------------------------------
+//Load event
+window.addEventListener(
+  "load", () => {
+    // console.log("Document chargé !");
+  });
+//------------------------------------------
+//ForEach
+// const boxes = document.getElementsByClassName("box");
+const boxes = document.querySelectorAll(".box");
+
+boxes.forEach((box) => {
+  box.addEventListener(
+    "click",
+    () => {
+      // box.style.transform = "scale(0.7)";
+    });
+});
+
+
+//------------------------------------
+//BOM
+//-----------------------------------
+// console.log(window.innerHeight);
+// console.log(window.scrollX);
+
+
+//Confirm
+btn2.addEventListener(
+  "click",
+  () => {
+    confirm("Voulez-vous vraiment vous tromper ?");
+  });
+
+
+//prompt
+btn1.addEventListener(
+  "click",
+  () => {
+    let answer = prompt("Entrez votre nom !");
+    questionContainer.innerHTML += `
+      <h3> <b>Bravo ${answer} </b>  </h3> `;
+  });
+
+// Timer: compte à rebours 
+// setTimeout : Temps en miliseconde avant de declencher 
+
+setTimeout(() => {
+  questionContainer.style.borderRadius = "300px";
+
+}, 2000);
+
+// setInterval(() => {
+//   document.body.innerHTML += `
+//   <div class="box">
+//   <h2> Nouvelle boite ! </h2>
+//   </div>`;
+// }, 1000);
+
+// setInterval()--------
+//-----------------------------------
+let interval = setInterval(() => {
+  document.body.innerHTML += `
+  <div class="box">
+  <h2> Nouvelle boite ! </h2>
+  </div>`;
+}, 1000);
+
+// clearInterval()--------
+//-----------------------------------
+document.body.addEventListener(
+  "click",
+  (e)=>{
+    // console.log(e.target);
+    clearInterval(interval);
+});
+
+// remove()--------
+//-----------------------------------
+document.body.addEventListener(
+  "click",
+  (e)=>{
+    // e.target.remove();
+    // clearInterval(interval);
+});
+
+          
+
+
+
+
+     
