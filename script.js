@@ -138,7 +138,7 @@ boxes.forEach((box) => {
   box.addEventListener(
     "click",
     () => {
-      // box.style.transform = "scale(0.7)";
+      box.style.transform = "scale(0.7)";
     });
 });
 
@@ -185,11 +185,11 @@ setTimeout(() => {
 // setInterval()--------
 //-----------------------------------
 let interval = setInterval(() => {
-  document.body.innerHTML += `
-  <div class="box">
-  <h2> Nouvelle boite ! </h2>
-  </div>`;
-}, 100000);
+  // document.body.innerHTML += `
+  // <div class="box">
+  // <h2> Nouvelle boite ! </h2>
+  // </div>`;
+}, 300000);
 
 // clearInterval()--------
 //-----------------------------------
@@ -206,12 +206,28 @@ document.body.addEventListener(
   "click",
   (e)=>{
     // e.target.remove();
-    // clearInterval(interval);
+    clearInterval(interval);
 });
+//Location
 
-          
+// console.log(location.href);
+// console.log(location.host);
+// console.log(location.pathname);
+// console.log(location.search);
+  // location.replace("https://www.hostinger.com/");
 
-
-
+   window.onload = ()=>{
+      // location.href ="https://www.hostinger.com/";
+    }  
+    // console.log(navigator.userAgent);  
+    
+    // History
+    // console.log(window.history);
+    window.history.back();
+    history.go(-2);
+    
+  
+  
+ 
 
      
