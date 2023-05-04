@@ -166,7 +166,6 @@ btn1.addEventListener(
     questionContainer.innerHTML += `
       <h3> <b>Bravo ${answer} </b>  </h3> `;
   });
-
 // Timer: compte à rebours 
 // setTimeout : Temps en miliseconde avant de declencher 
 
